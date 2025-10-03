@@ -1,0 +1,165 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.drop-d {
+    position:relative;
+    z-index:10;
+}
+
+.drop-d-list {
+    display:none;
+    position:absolute;
+    width:70px;
+}
+
+.drop-d:hover .drop-d-list {
+    display:flex;
+    flex-direction:column;
+}
+
+.globe-size {
+    font-size:30px;
+    color:rgb(134, 0, 0);
+}
+
+.chevron-color {
+    color:rgb(134, 0, 0);
+}
+
+.text-bg-dark-red {
+    color:rgb(134, 0, 0);
+}
+
+.logo {
+    width:clamp(100px, calc(21.16vw + 20.63px), 300px);
+    height:auto;
+}
+
+.fon-image-header {
+    position:relative;
+    background-image:url("../img/bg.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+    color:white;
+}
+
+@media(max-width:992px) {
+    .fon-image-header {
+        background-position:45% center;
+    }
+}
+
+.dark-fon {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color:rgba(0,0,0,0.4);
+}
+
+.header-title {
+    position:relative;
+}
+
+.container-indicators {
+    max-width:900px;
+}
+
+#tab1, #tab2, #tab3 {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.circle {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgb(160, 160, 160);
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+
+.text {
+    text-align:center;
+}
+
+br {
+    display:none;
+}
+
+@media(max-width:992px) {
+    br {
+        display:block;
+    }
+}
+
+input[type="text"], input[type="tel"] {
+    display:block;
+    width:100%;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:5px;
+    border:1px solid rgb(230, 230, 230);
+    background-color:white;
+}
+
+::placeholder {
+    text-align:center;
+}
+
+.bg-dark-red {
+    background-color:rgb(134, 0, 0);
+    border:1px solid rgb(134, 0, 0);
+    color:white;
+}
+
+.bg-dark-red:hover {
+    background-color:white;
+    color:rgb(134, 0, 0);
+    transition-duration:0.3s;
+}
+
+#button-search {
+    display:block;
+    width:100%;
+    height:40px;
+}
+
+.close {
+    display:none;
+}
+
+#section-insured-open-close {
+    display:none;
+}
+
+.section-insured, .section-information {
+    background-color:rgb(249, 249, 255);
+}
+
+.payment {
+    width:150px;
+    height:auto;
+}
+
+.disabled {
+      pointer-events: none;
+      background-color:grey;
+      text-decoration: none;
+      cursor: default;
+    }
+    .enabled {
+      pointer-events: auto;
+      background-color:rgb(134, 0, 0);
+      text-decoration: underline;
+      cursor: pointer;
+    }
