@@ -102,7 +102,7 @@ br {
     }
 }
 
-input[type="text"], input[type="tel"] {
+input[type="text"], input[type="tel"], input[type="date"], input[type="phone_number"], select {
     display:block;
     width:100%;
     text-align:center;
@@ -112,8 +112,30 @@ input[type="text"], input[type="tel"] {
     background-color:white;
 }
 
+.rezident {
+    text-align:left;
+}
+
+select {
+    padding-left:7px;
+}
+
+.btn-next {
+    width:100%;
+}
+
 ::placeholder {
     text-align:center;
+}
+
+.kadastr {
+    text-align:left;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.kadastr::placeholder {
+    text-align:left;
 }
 
 .bg-dark-red {
@@ -163,3 +185,85 @@ input[type="text"], input[type="tel"] {
       text-decoration: underline;
       cursor: pointer;
     }
+
+    .qr-code {
+        width:35px;
+        height:35px;
+    }
+
+    
+
+
+    .slider-container {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+   #slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, red 0%, #ddd 0%);
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* WebKit дорожка */
+#slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* WebKit бегунок */
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  /*border: 2px solid white;*/
+  border-radius: 50%;
+  margin-top: -6px;
+  cursor: pointer;
+}
+
+/* Firefox дорожка */
+#slider::-moz-range-track {
+  height: 8px;
+  border-radius: 4px;
+  background: transparent;
+}
+
+/* Firefox бегунок */
+#slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: red;
+ /* border: 2px solid white;*/
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 14px;
+      color: grey;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      display: none;
+    }
+
+    input[type="date"] {
+      font-size: 16px;
+    }
+
+  #result, #kad {
+    display:none;
+  }
