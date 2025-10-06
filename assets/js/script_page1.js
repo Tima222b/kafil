@@ -78,12 +78,15 @@ const slider = document.getElementById("slider");
 
     document.getElementById("search-result").addEventListener("click", () => {
         const result = document.getElementById("result");
+        const link_next = document.getElementById("link-next");
         if(result.style.display == "flex") {
             result.style.display = "none";
+            link_next.style.display = "none";
         }
 
         else {
             result.style.display = "flex";
+            link_next.style.display = "block";
         }
     });
 

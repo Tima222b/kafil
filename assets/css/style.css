@@ -264,6 +264,6 @@ select {
       font-size: 16px;
     }
 
-  #result, #kad {
+  #result, #kad, #link-next {
     display:none;
   }
