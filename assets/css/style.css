@@ -108,6 +108,8 @@ input[type="text"], input[type="tel"], input[type="date"], input[type="phone_num
     text-align:left;
     padding-top:5px;
     padding-bottom:5px;
+    padding-left:10px;
+    padding-right:10px;
     border:1px solid rgb(230, 230, 230);
     background-color:white;
 }
@@ -169,10 +171,10 @@ select {
 }
 
 
-.payment {
+/*.payment {
     width:150px;
     height:auto;
-}
+}*/
 
 .disabled {
       pointer-events: none;
@@ -188,8 +190,8 @@ select {
     }
 
     .qr-code {
-        width:35px;
-        height:35px;
+        width:100%;
+        height:auto;
     }
 
     
@@ -266,4 +268,10 @@ select {
 
   #result, #kad, #link-next {
     display:none;
+  }
+
+
+  .row {
+    margin-left:0;
+    margin-right:0;
   }
