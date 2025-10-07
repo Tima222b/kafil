@@ -170,6 +170,11 @@ select {
     background-color:rgb(249, 249, 255);
 }
 
+.section-information {
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 /*.payment {
     width:150px;
