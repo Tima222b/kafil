@@ -14,7 +14,7 @@
 </head>
 <body onload="indicators()">
     <div>
-        <header>
+        <header class="container-fluid">
             <nav class="d-flex justify-content-between align-items-center mt-3 mt-md-4 mb-3 mb-md-5">
                 <a class="logo-link" href="#">
                     <img class="logo" src="./assets/img/logo.svg" alt="">
@@ -67,165 +67,200 @@
             </div>
 
 
-            <section class="section-information p-3 p-md-5">
-                <h3 class="mt-3 mt-md-5 mb-3 mb-md-5 ms-3">Информация о заявителе</h3>
+            <section class="section-information">
+                <div class="container-fluid p-3">
+                <h3 class="mt-3 mt-md-5 mb-3 mb-md-5">Информация о заявителе</h3>
                 
                     <div class="row g-3">
-                        <div class="col-xxl-8 g-3 row">
-                            <div class="col-md-6">
-                                <p>Выберите. Вы являетесь - ?</p>
-                                <select name="rezident" class="rezident" value="1" disabled>
-                                    <option>
-                                        Резидент Республики Узбекистан 
-                                    </option>
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <p>Выберите. Вы являетесь - ?</p>
-                                <select name="rezident" class="rezident" value="2"  disabled>
-                                    <option>
-                                        Физическим лицом
-                                    </option>
-                                </select>
-                            </div>
-                            <div class="col-12 d-flex flex-column">
-                                <p>Выберите. Вы являетесь - ?</p>
-                                <select name="rezident" class="rezident" value="3">
-                                    <option>
-                                        Паспорт гражданина Республики Узбекистан
-                                    </option>
-                                    <option>
-                                        ID - карта Республики Узбекистан
-                                    </option>
-                                    <option>
-                                        Новый образец водительского удостоверения
-                                    </option>
-                                    
-                                </select>
-                            </div>
-                            <div class="col-4 col-md-2 col-xxl-2 align-self-end">
-                                <p>ID/Паспорт</p>
-                                <input class="bg-white border" type="text" name="id-passport" placeholder="AA">
-                            </div>
-                            <div class="col-8 col-md-10 col-xxl-4 align-self-end mt-3 mt-md-0">
-                                <input class="bg-white border" type="text" name="id-passport" placeholder="1234567">
-                            </div>
-                            <div class="col-xxl-4 col-md-8 mt-xxl-4 mt-3">
-                                <p>ПИНФЛ</p>
-                                <input class="bg-white border" type="text" name="id-passport" placeholder="1234567891011">
-                            </div>
-                            <div class="col-md-4 col-xxl-2 align-self-end mt-3 mt-md-0">
-                                <button type="button" id="button-search" class="bg-dark-red rounded">
-                                    <i class="fa fa-search search"></i>
-                                    <i class="fa fa-close close"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="col-xxl-4 bg-white d-none d-xxl-flex flex-column gap-2 p-3 border mt-3 mt-xxl-0">
-                            <h3>Результаты расчета</h3>
-                            <div>
-                                <p>Страховая сумма</p>
-                                <h3>0</h3>
-                            </div>
-                            <div>
-                                <p>Страховая премия</p>
-                                <h3>0</h3>
-                            </div>
-                        </div>
-
-
-                        <div id="section-insured-open-close" class="section-insured col-12 row mt-5 pt-3 pt-md-5 pb-3 pb-md-5">
-                            <h3>Информация о застрахованном</h3>
-                            <div class="col-12 g-3 row mt-3">
-                                <div class="col-md-4"> 
-                                    <p>Фамилия</p>
-                                    <input type="text" name="lastname" placeholder="Иванов">
-                                </div>
-                                <div class="col-md-4">
-                                    <p>Имя</p>
-                                    <input type="text" name="firstname" placeholder="Сергей">
-                                </div>
-                                <div class="col-md-4">
-                                    <p>Отчество</p>
-                                    <input type="text" name="patronymic" placeholder="Андреевич">
-                                </div>
-                                <!--<div class="col-md-3">
-                                        <p>Дата рождения</p>
-                                        <input type="date" name="birth_date" value="2000-01-12">
-                                    </div>-->
+                        <div class="col-xxl-8">
+                            <div class="g-3 row">
                                 <div class="col-md-6">
-                                    <p>Адрес</p>
-                                    <input type="text" name="address" placeholder="Мирабадский район, ул. Нукус">
+                                    <p>Выберите. Вы являетесь - ?</p>
+                                    <select name="rezident" class="rezident" value="1" disabled>
+                                        <option>
+                                            Резидент Республики Узбекистан 
+                                        </option>
+                                    </select>
                                 </div>
-                                <div class="col-md-4">
-                                    <p>Номер телефона</p>
-                                    <input type="phone_number" name="phone_number" placeholder="(+998 90) 802-57-90">
+                                <div class="col-md-6">
+                                    <p>Выберите. Вы являетесь - ?</p>
+                                    <select name="rezident" class="rezident" value="2"  disabled>
+                                        <option>
+                                            Физическим лицом
+                                        </option>
+                                    </select>
                                 </div>
-                                <div class="col-md-2">
-                                    <p style="visibility:hidden;">Кнопка</p>
-                                    <button id="button-next" class="bg-dark-red btn-next py-1">
-                                        <i class="fas fa-arrow-right"></i>
+                                <div class="col-12 d-flex flex-column">
+                                    <p>Выберите. Вы являетесь - ?</p>
+                                    <select name="rezident" class="rezident" value="3">
+                                        <option>
+                                            Паспорт гражданина Республики Узбекистан
+                                        </option>
+                                        <option>
+                                            ID - карта Республики Узбекистан
+                                        </option>
+                                        <option>
+                                            Новый образец водительского удостоверения
+                                        </option>
+                                        
+                                    </select>
+                                </div>
+                                <div class="col-4 col-md-2 col-xxl-2 align-self-end">
+                                    <p>ID/Паспорт</p>
+                                    <input class="bg-white border" type="text" name="id-passport" placeholder="AA">
+                                </div>
+                                <div class="col-8 col-md-10 col-xxl-4 align-self-end mt-3 mt-md-0">
+                                    <input class="bg-white border" type="text" name="id-passport" placeholder="1234567">
+                                </div>
+                                <div class="col-xxl-4 col-md-8 mt-xxl-4 mt-3">
+                                    <p>ПИНФЛ</p>
+                                    <input class="bg-white border" type="text" name="id-passport" placeholder="1234567891011">
+                                </div>
+                                <div class="col-md-4 col-xxl-2 align-self-end mt-3 mt-md-0">
+                                    <button type="button" id="button-search" class="bg-dark-red rounded">
+                                        <i class="fa fa-search search"></i>
+                                        <i class="fa fa-close close"></i>
                                     </button>
                                 </div>
-                                <div id="kad" class="col-12 row g-3">
-                                    <h3 class="col-12">Введите кадастровый номер дома</h3>
-                                    <div class="col-md-10">
-                                        <input class="text-start kadastr" type="text" name="kadastr" placeholder="00:00:00:00:00:0000">
-                                    </div>
-                                    <div class="col-md-2">     
-                                        <button id="search-result" class="bg-dark-red py-1" style="display:block;width:100%;">
-                                            <i class="fa fa-search"></i>
-                                        </button> 
-                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xxl-4">
+                            <div class="bg-white d-none d-xxl-flex flex-column gap-2 p-3 border mt-3 mt-xxl-0">
+                                <h3>Результаты расчета</h3>
+                                <div>
+                                    <p>Страховая сумма</p>
+                                    <h3>0</h3>
                                 </div>
-                                <div id="result" class="col-12 row">
-                                    <div class="col-12 row g-3 w-100">
-                                        <h3 class="col-12">Расчет</h3>
-                                        <div class="col-12 row border rounded">
-                                            <p class="col-12">Страховая сумма</p>
-                                            <div class="slider-container col-12">
-                                                <input
-                                                type="range"
-                                                id="slider"
-                                                min="20000000"
-                                                max="100000000"
-                                                step="500000"
-                                                value="20000000"
-                                                />
-                                                <div class="slider-labels">
-                                                <span id="currentValue">20 000 000</span>
-                                                <span>100 000 000</span>
-                                                </div>
+                                <div>
+                                    <p>Страховая премия</p>
+                                    <h3>0</h3>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="section-insured-open-close" class="section-insured col-12">
+                        <div class="row mt-3 pt-3 pb-3 pb-md-5">
+                            <div class="col-12">
+                                <h3>Информация о застрахованном</h3>
+                            </div>
+                            <div class="col-12">
+                                <div class="g-3 row mt-3">
+                                    <div class="col-md-4"> 
+                                        <p>Фамилия</p>
+                                        <input type="text" name="lastname" placeholder="Иванов">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Имя</p>
+                                        <input type="text" name="firstname" placeholder="Сергей">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Отчество</p>
+                                        <input type="text" name="patronymic" placeholder="Андреевич">
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <p>Адрес</p>
+                                        <input type="text" name="address" placeholder="Мирабадский район, ул. Нукус">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>Номер телефона</p>
+                                        <input type="phone_number" name="phone_number" placeholder="(+998 90) 802-57-90">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <p style="visibility:hidden;">Кнопка</p>
+                                        <button id="button-next" class="bg-dark-red btn-next py-1">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div id="kad" class="row g-3">
+                                            <h3 class="col-12">Введите кадастровый номер дома</h3>
+                                            <div class="col-md-10">
+                                                <input class="text-start kadastr" type="text" name="kadastr" placeholder="00:00:00:00:00:0000">
+                                            </div>
+                                            <div class="col-md-2">     
+                                                <button id="search-result" class="bg-dark-red py-1 w-100" style="display:block;width:100%;">
+                                                    <i class="fa fa-search"></i>
+                                                </button> 
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-12">
+                                        <div id="result" class="row">
+                                            <div class="col-12">
+                                                <div class="row g-3">
+                                                    <div class="col-12">
+                                                        <div>
+                                                            <h3>Расчет</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="row border rounded" style="margin-left:0px; margin-right:0px;">
+                                                            <div class="col-12">
+                                                                <div>
+                                                                    <p>Страховая сумма</p>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="slider-container col-12">
+                                                                <div>
+                                                                <input
+                                                                type="range"
+                                                                id="slider"
+                                                                min="20000000"
+                                                                max="100000000"
+                                                                step="500000"
+                                                                value="20000000"
+                                                                />
+                                                                <div class="slider-labels">
+                                                                <span id="currentValue">20 000 000</span>
+                                                                <span>100 000 000</span>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                    <div class="col-12 row g-3 bg-danger rounded mx-0 my-3 py-4">
-                                        <div class="col-md-4">
-                                            <p class="text-white">Дата начала</p>
-                                            <input class="text-start px-2 rounded" type="date" id="today">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <p class="text-white">Дата окончания</p>
-                                            <input class="text-start px-2 rounded" type="date" id="future" value="2026-10-05">
-                                        </div>
-                                        <div class="col-md-4 align-self-end">
-                                            <button class="d-block py-2 bg-white rounded" style="width:100%;border:none;">
-                                                Перейти к проверке данных
-                                            </button>
-                                        </div>
-                                    </div>
+                                            <div class="col-12">
+                                                <div class="row g-3 bg-danger rounded my-3 py-4" style="margin-left:0px; margin-right:0px;">
+                                                    <div class="col-md-4">
+                                                        <div>
+                                                        <p class="text-white">Дата начала</p>
+                                                        <input class="text-start px-2 rounded" type="date" id="real-date">
+                                                        <input type="time" id="real-time">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div>
+                                                        <p class="text-white">Дата окончания</p>
+                                                        <input class="text-start px-2 rounded" type="date" id="fake-date">
+                                                        <input type="time" id="fake-time">
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-4 align-self-end">
+                                                        <a href="./page2.html" class="d-block py-2 bg-white rounded text-center text-decoration-none text-dark" style="width:100%;border:none;">
+                                                            Перейти к проверке данных
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                    <div class="col-xxl-12 bg-white d-flex d-xxl-none flex-column gap-2 p-3 border mt-3 mt-xxl-0">
-                                        <h3>Результаты расчета</h3>
-                                        <div>
-                                            <p>Страховая сумма</p>
-                                            <h3>0</h3>
-                                        </div>
-                                        <div>
-                                            <p>Страховая премия</p>
-                                            <h3>0</h3>
+                                            <div class="col-xxl-12 bg-white d-flex d-xxl-none flex-column gap-2 p-3 border mt-3 mt-xxl-0">
+                                                <h3>Результаты расчета</h3>
+                                                <div>
+                                                    <p>Страховая сумма</p>
+                                                    <h3>0</h3>
+                                                </div>
+                                                <div>
+                                                    <p>Страховая премия</p>
+                                                    <h3>0</h3>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -234,12 +269,13 @@
                             <div class="col-12 d-flex justify-content-end">
                                 <a id="link-next" href="./page2.html" class="text-decoration-none bg-dark-red py-2 px-4 mt-4 rounded">Далее</a>
                             </div>
-                        </div>
 
+                        </div>
+                        </div>
                     </div>
 
                     
-                
+                </div>
             </section>
 
             

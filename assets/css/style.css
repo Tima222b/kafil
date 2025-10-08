@@ -134,6 +134,8 @@ select {
     text-align:left;
     padding-left:10px;
     padding-right:10px;
+    display:block;
+    width:100%;
 }
 
 .kadastr::placeholder {
@@ -200,12 +202,6 @@ select {
     }
 
     
-
-
-    .slider-container {
-      width: 100%;
-      text-align: center;
-    }
 
    #slider {
   -webkit-appearance: none;
@@ -276,7 +272,35 @@ select {
   }
 
 
-  .row {
+  /*.row {
     margin-left:0;
     margin-right:0;
-  }
+  }*/
+
+  input[type="date"],
+    input[type="time"] {
+      /*padding: 8px;
+      font-size: 16px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;*/
+      appearance: none;      /* Удаляет иконку в большинстве браузеров */
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+    }
+
+    /* Удаляет иконки календаря и часов */
+    input[type="date"]::-webkit-calendar-picker-indicator,
+    input[type="time"]::-webkit-calendar-picker-indicator {
+      display: none;
+      -webkit-appearance: none;
+    }
+
+    input[type="date"]::-moz-calendar-picker-indicator,
+    input[type="time"]::-moz-calendar-picker-indicator {
+      display: none;
+    }
+
+    input[type="time"] {
+        display:none;
+    }

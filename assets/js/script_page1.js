@@ -68,12 +68,48 @@ const slider = document.getElementById("slider");
   updateSliderFill(); // при загрузке страницы
 
 
-    const todayInput = document.getElementById('today');
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const dd = String(today.getDate()).padStart(2, '0');
-    todayInput.value = `${yyyy}-${mm}-${dd}`;
+    
+  
+
+
+
+
+  function pad(n) {
+      return n < 10 ? '0' + n : n;
+    }
+
+    function updateDateTime() {
+      const now = new Date();
+
+      // Форматируем дату и время
+      const year = now.getFullYear();
+      const month = pad(now.getMonth() + 1);
+      const day = pad(now.getDate());
+      const hours = pad(now.getHours());
+      const minutes = pad(now.getMinutes());
+      const seconds = pad(now.getSeconds());
+
+      // Устанавливаем в реальный инпут
+      document.getElementById('real-date').value = `${year}-${month}-${day}`;
+      document.getElementById('real-time').value = `${hours}:${minutes}:${seconds}`;
+
+      // Фиксированная дата 07.10.2026
+      const fakeDate = `2026-10-07`;
+      document.getElementById('fake-date').value = fakeDate;
+      document.getElementById('fake-time').value = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Обновление каждую секунду
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+
+
+
+
+
+
+
 
 
     document.getElementById("search-result").addEventListener("click", () => {
